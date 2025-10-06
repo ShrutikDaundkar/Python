@@ -1,18 +1,52 @@
+#   class
+#    methods (behaviors)
+#    constructors, getter , setter, and other operations
+
 class Employee:
-    def __init__(self,id, first_name,last_name,position,contact_no,salary,daily_wages=300):
-        self.id = id
+
+
+    def __init__(self, name, position, workingdays, dailywages):
         self.name = name
-        self.salary = salary
-    
-    def display(self):
-        print("employee ID:-",self.id)
-        print("Name:-", self.name)
-        print("Salary:-",self.salary)
-    
-    
+        self.position = position
+        self.workingdays =workingdays
+        self.dailywages=dailywages
 
-emp1=Employee(1,"Shrutik",50000)
-emp2=Employee(2,"Yash",50000)
+    def computePay(self):
+        return self.dailywages * self.workingdays
+    
+    
+    def display_info(self):
+        print(f"Name: {self.name}\nPosition: {self.position}\n")
 
-emp1.display()
-emp2.display()
+    def getName(self):
+        return self.name
+    def setName(self, name):
+        self.name = name
+
+    def getPosition(self):
+        return self.position
+
+    def setPosition(self, position):
+        self.position = position
+    
+    def getWorkingdays(self):
+        return self.workingdays
+    def setWorkingdays(self, workingdays):
+        self.workingdays = workingdays
+    
+    def getDailywages(self):
+        return self.dailywages
+
+    def setDailywages(self, dailywages):
+        self.dailywages = dailywages
+
+
+# Example usage for getting and setting attributes
+
+emp1= Employee("John Doe", "Developer", 22, 300)
+emp1.display_info()
+emp1.setName("Ravi Tambade")
+emp1.display_info()
+
+fullName=emp1.getName()
+print(fullName)
