@@ -40,4 +40,5 @@ iplteam = {
 }
 
 #print(iplteam)
-print(iplteam["states"][2]["team"])
+
+print(iplteam["states"][1]["team"]["players"][0])
